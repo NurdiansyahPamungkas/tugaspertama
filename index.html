@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Information</title>
+
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="judul">
+        <h1>My Personal Information</h1>
+      </div>
+
+      
+    </header>
+
+    <main>
+      <div id="content">
+        <article class="box" id="gui">
+          <h2>My Profile</h2>
+          <p>
+            Saya adalah seorang mahasiswa S1 Teknik Elektro di Universitas Islam Negeri Sunan Gunung Djati Bandung. Sekarang saya sedang mengikuti program Bangkit 2023. Saya sedang membuat website untuk salah satu tugas saya di program Bangkit 2023, semoga saya bisa mengikuti program ini sampai akhir dan mendapat nilai yang memuaskan.
+          </p>
+
+          <p>
+            Diprogram Bangkit 2023 ini banyak sekali hal yang telah saya pelajari diantaranya Belajar Dasar Pemrograman JavaScript, Belajar Dasar Pemrograman Web, Belajar Membuat Aplikasi Back-End untuk Pemula dengan Google Cloud, Menjadi Google Cloud Engineer, Getting Started with Google Kubernetes Engine, Getting Started with Terraform for Google Cloud, Google Cloud Computing Foundations Cloud Computing Fundamentals, Google Cloud Fundamentals Core Infrastructure, Logging, Monitoring and Observability in Google Cloud, Preparing for your Associate Cloud Engineer Journey, Essential Google Cloud Infrastructure Foundation, Essential Google Cloud Infrastructure Core Services, Elastic Google Cloud Infrastructure Scaling and Automation dan masih banyak lagi. 
+          </p>
+            
+        </article>
+
+        <article class="box" id="cli">
+          <h2>My Social Media Account</h2>
+          <p>
+            <div class="facebook">
+              <a href="#"><img src="assets/image/Facebook.png" alt="Facebook"></a>
+            </div> 
+            <div class="facebook">
+              <a href="#"><img src="assets/image/twitter.png" alt="Facebook"></a>
+            </div> 
+            <div class="facebook">
+              <a href="#"><img src="assets/image/ig.png" alt="Facebook"></a>
+            </div> 
+            <div class="facebook">
+              <a href="#"><img src="assets/image/git.png" alt="Facebook"></a>
+            </div> 
+          </p>
+        </article>
+
+        
+      </div>
+
+      <aside>
+        <article class="box profile">
+          <header>
+            <h2>About Me</h2>
+            <figure>
+              <img src="assets/image/foto_profil.png" alt="foto profil" class="featured-image" />
+            </figure>
+          </header>
+          <section>
+            <h3>Identitas Diri</h3>
+            <table>
+              <tr>
+                <th style="text-align: left;">Nama</th>
+                <td>Nurdiansyah Pamungkas</td>
+              </tr>
+              <tr>
+                <th style="text-align: left;">Tanggal Lahir</th>
+                <td>20 Februari 2001</td>
+              </tr>
+              <tr>
+                <th style="text-align: left;">Negara Asal</th>
+                <td>Indonesia</td>
+              </tr>
+              <tr>
+                <th style="text-align: left;">Nomor Telepon</th>
+                <td>+6285318401618</td>
+              </tr>
+            </table>
+          </section>
+        </article>
+      </aside>
+    </main>
+
+    <footer>
+      <p>My Personal Information &#169; 2023, Pembuat</p>
+    </footer>
+  </body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+    let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); 
+}
+
+let slideIndex2 = 0;
+showSlides2();
+
+function showSlides2() {
+  let n;
+  let slides2 = document.getElementsByClassName("mySlides2");
+  let dots2 = document.getElementsByClassName("dot2");
+  for (n = 0; n < slides2.length; n++) {
+    slides2[n].style.display = "none";  
+  }
+  slideIndex2++;
+  if (slideIndex2 > slides2.length) {slideIndex2 = 1}    
+  for (n = 0; n < dots2.length; n++) {
+    dots2[n].className = dots2[n].className.replace(" active", "");
+  }
+  slides2[slideIndex2-1].style.display = "block";  
+  dots2[slideIndex2-1].className += " active";
+    setTimeout(showSlides2, 2000); 
+}  
+
+$(document).ready(function(){
+  
+  $("a").on('click', function(event) {
+
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
